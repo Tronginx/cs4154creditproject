@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds0a6l2dv6j57"]
+
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_hrsik"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_hrsik")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+offset_left = 30.0
+offset_top = 470.0
+offset_right = 231.0
+offset_bottom = 512.0
+theme_override_font_sizes/font_size = 30
+text = "0"
+
+[node name="LevelLabel" type="Label" parent="CanvasLayer"]
+offset_left = 6.0
+offset_top = 422.0
+offset_right = 340.0
+offset_bottom = 464.0
+theme_override_font_sizes/font_size = 30

@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy6soxh2q5b4d"]
+
+[ext_resource type="Script" path="res://scripts/brick.gd" id="1_qfxug"]
+[ext_resource type="Texture2D" uid="uid://bb3fluwqgpvxf" path="res://assets/brick.png" id="2_edqyw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bnkl"]
+size = Vector2(32, 31)
+
+[node name="Brick" type="RigidBody2D" groups=["Brick"]]
+gravity_scale = 0.0
+script = ExtResource("1_qfxug")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_edqyw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_3bnkl")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 50
+lifetime = 0.5
+one_shot = true
+preprocess = 0.5
+randomness = 1.0
+draw_order = 1
+emission_shape = 1
+emission_sphere_radius = 24.0
+gravity = Vector2(0, -500)
+linear_accel_min = 0.1
+linear_accel_max = 0.1
+scale_amount_min = 0.0
+scale_amount_max = 2.0
+color = Color(0.241077, 0.725306, 0.522177, 1)
